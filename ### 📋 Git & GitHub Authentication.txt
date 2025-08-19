@@ -1,0 +1,62 @@
+### 📋 Git & GitHub Authentication Worksheet
+
+This worksheet is a brief guide to help you get your Git environment ready and authenticate with GitHub using an SSH key.
+
+---
+
+### Step 1: Configure Git Identity
+
+* Before you can make any commits, Git needs to know who you are. This information is attached to every commit you make.
+* Open **Git Bash** from your Windows Start Menu.
+* Run the following commands, replacing the name and email with your own.
+
+    `git config --global user.name "Your Name"`
+    `git config --global user.email "youremail@example.com"`
+
+---
+
+### Step 2: Generate a New SSH Key Pair
+
+* This key pair will be your new way of securely connecting to GitHub.
+* Close and then re-open **Git Bash** as an **administrator**. Right-click the icon and select "Run as administrator."
+* In the Git Bash terminal, run the following command.
+
+    `ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+* When prompted to save the key, press **Enter** to accept the default location.
+* When asked for a passphrase, you can either **set a strong password** for added security or press **Enter** twice to leave it empty.
+
+---
+
+### Step 3: Copy Your Public Key
+
+* Your public key is now saved in a file with a `.pub` extension. You need to copy its contents.
+* In Git Bash, run this command to copy the key:
+
+    `cat ~/.ssh/id_ed25519.pub | clip`
+
+---
+
+### Step 4: Add the Public Key to Your GitHub Account
+
+* Go to your GitHub account on a web browser and log in.
+* Click on your profile picture in the top right and go to **Settings**.
+* In the left sidebar, click **SSH and GPG keys**.
+* Click the **New SSH key** button.
+* Give the key a descriptive title (e.g., "Windows Laptop").
+* **Paste the entire key** you copied from the clipboard into the "Key" field.
+* Click **Add SSH key** to save it.
+
+---
+
+### Step 5: Test Your Connection and Push to GitHub
+
+* In Git Bash, run the following command to verify that your connection is working:
+
+    `ssh -T git@github.com`
+
+* You should see a message confirming that you have successfully authenticated.
+
+* Finally, push your code to your repository:
+
+    `git push -u origin main`
