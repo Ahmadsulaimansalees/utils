@@ -1,0 +1,104 @@
+1. This confige belongs to the user settings json in any vscode fork
+2. it modifies the users folder and file style and color to much more desirable and especially uncovered styles like trpc etc 
+3. past mostly at the edn
+
+config:
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tokyo Night",
+  "editor.fontFamily": "\"JetBrains Mono\", 'Courier New', monospace",
+  "editor.fontSize": 12,
+  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.fontFamily": "CaskaydiaCove NF",
+  "terminal.integrated.lineHeight": 0.5,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.cursorBlinking": "expand",
+  "material-icon-theme.folders.customClones": [
+    {
+      "name": "trpc-folder",
+      "base": "folder-routes",
+      "color": "#398CCB",
+      "folderNames": ["trpc"],
+    },
+    {
+      "name": "src-folder",
+      "base": "folder-src",
+      "color": "#FF5733",
+      "folderNames": ["src"],
+    },
+    {
+      "name": "user-folder",
+      "base": "folder-admin",
+      "color": "#5C6BC0",
+      "folderNames": ["user", "users", "(Users)"],
+    },
+    {
+      "name": "typescript-config-folder",
+      "base": "folder-typescript",
+      "color": "#3178C6",
+      "folderNames": ["typescript-config", "tsconfig"],
+    },
+    {
+      "name": "auth-folder",
+      "base": "folder-secure",
+      "color": "#707070",
+      "folderNames": ["auth", "(Auth)"],
+    },
+    {
+      "name": "admin-folder",
+      "base": "admin",
+      "color": "#e68200",
+      "folderNames": ["(Admin)"],
+    },
+    {
+      "name": "xlsx-folder",
+      "base": "folder-snapcraft",
+      "color": "#217346",
+      "folderNames": ["xlsx"],
+    },
+  ],
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "user-file",
+      "base": "authors",
+      "color": "#5C6BC0",
+      "fileNames": ["user", "users"],
+      "fileExtensions": ["user", "users"],
+    },
+    {
+      "name": "trpc-file",
+      "base": "routing",
+      "color": "#398CCB",
+      "fileExtensions": ["trpc.ts"],
+      "fileNames": ["trpc.init.ts"],
+    },
+    {
+      "name": "trpc-router",
+      "base": "routing",
+      "color": "#FFA500",
+      "fileExtensions": ["trpc.router.ts"],
+      "fileNames": ["trpc.router.ts"],
+    },
+    {
+      "name": "trpc-context",
+      "base": "routing",
+      "color": "#A020F0",
+      "fileExtensions": ["trpc.context.ts"],
+      "fileNames": ["trpc.context.ts"],
+    },
+    {
+      "name": "auth-file",
+      "base": "key",
+      "color": "#707070",
+      "fileNames": ["auth.ts"],
+      "fileExtensions": ["auth.ts"],
+    },
+    {
+      "name": "xlsx-file",
+      "base": "table",
+      "color": "#217346",
+      "fileNames": ["xlsx.config.ts"],
+      "fileExtensions": ["xlsx.config.ts"],
+    },
+  ],
+}
